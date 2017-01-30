@@ -1,23 +1,31 @@
+________________________________________________________________________________________________________
 FF
 
-As I wrote you in my first e-mails, I could describe some computational tools (and possibly, some web resources) to extract and interpret immunological features from tumor NGS data 
-( http://www.nature.com/nrg/journal/v17/n8/full/nrg.2016.67.html ). 
-I believe that most of these methods can be approached through simplified examples and exercises.
+Computational tools (+ web resources) to extract and interpret immunological features from tumor NGS data 
+( http://www.nature.com/nrg/journal/v17/n8/full/nrg.2016.67.html ) 
 
+Main themes: 
 
-I would like to focus on two main themes: the prediction of tumor-specific antigens (i.e. neoantigens and cancer-germline antigens) and the characterization of tumor-infiltrating immune cells.
+1. Prediction of tumor-specific antigens
+  1a. Cancer-germline antigens
+  1b. Neoantigens
+2. Characterization of tumor-infiltrating immune cells
 
+Methods:
 
-For germline antigens, the computations are relatively easy. While for
-neoantigens, we would need to assemble a small pipeline to perform:
-HLAtyping, prediction of mutated proteins and peptides, and prediction of peptides binding to HLA molecules. We can employ some small toy exercises and let the learners go through the full pipeline.
+1a. easy computation
+1b. pipeline assembly:
+  - HLAtyping
+  - prediction of mutated proteins and peptides
+  - prediction of peptides binding to HLA molecules
+  - (selection of expressed peptides)
 
-
-For the characterization immune infiltrates, I would propose a
-deconvolution method like 
-CIBERSORT <https://cibersort.stanford.edu/>     or  
-CellMix <https://web.cbio.uct.ac.za/~renaud/CRAN/web/CellMix/>.
-
+2. deconvolution of expression data with
+  - CIBERSORT: https://cibersort.stanford.edu/ 
+  or
+  - CellMix: https://web.cbio.uct.ac.za/~renaud/CRAN/web/CellMix
+  
+________________________________________________________________________________________________________
 FE
 My expertise is on dynamic models of signaling pathways (in particular logic models) applied to investigate (de)regulation of signal transduction in cancer and the use of these approaches for personalised therapy. In my research I mainly focus on the investigation of signaling pathways in cancer cells and the effect of targeted kinase inhibitors (e.g. aimed at suggesting personalised combinatorial therapies), but the same approaches can be useful also to study cancer immunology. 
 
