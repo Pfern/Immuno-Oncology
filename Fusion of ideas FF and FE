@@ -1,0 +1,31 @@
+FF
+
+As I wrote you in my first e-mails, I could describe some computational tools (and possibly, some web resources) to extract and interpret immunological features from tumor NGS data 
+( http://www.nature.com/nrg/journal/v17/n8/full/nrg.2016.67.html ). 
+I believe that most of these methods can be approached through simplified examples and exercises.
+
+
+I would like to focus on two main themes: the prediction of tumor-specific antigens (i.e. neoantigens and cancer-germline antigens) and the characterization of tumor-infiltrating immune cells.
+
+
+For germline antigens, the computations are relatively easy. While for
+neoantigens, we would need to assemble a small pipeline to perform:
+HLAtyping, prediction of mutated proteins and peptides, and prediction of peptides binding to HLA molecules. We can employ some small toy exercises and let the learners go through the full pipeline.
+
+
+For the characterization immune infiltrates, I would propose a
+deconvolution method like 
+CIBERSORT <https://cibersort.stanford.edu/>     or  
+CellMix <https://web.cbio.uct.ac.za/~renaud/CRAN/web/CellMix/>.
+
+FE
+My expertise is on dynamic models of signaling pathways (in particular logic models) applied to investigate (de)regulation of signal transduction in cancer and the use of these approaches for personalised therapy. In my research I mainly focus on the investigation of signaling pathways in cancer cells and the effect of targeted kinase inhibitors (e.g. aimed at suggesting personalised combinatorial therapies), but the same approaches can be useful also to study cancer immunology. 
+
+Here below a list of topics I could cover:
+- Introduction about the importance of signaling pathways in the context of tumor immunology: immune pathway, checkpoint blockade, cancer pathways and tumor escape mechanisms to immune system 
+
+-  Overview of proteomics data that can be used to investigate signaling pathway dynamics and their specific advantages and limitations (number of measurable proteins versus number of samples/perturbed conditions). I could include here standard technologies (e.g. Reverse Phase Protein Arrays, Mass Spectrometry, xMAP) as well as a novel microfluidics technology we recently developed for functional screening of patient samples (http://biorxiv.org/content/early/2016/12/14/093906 <http://biorxiv.org/content/early/2016/12/14/093906>).
+
+- Overview of quantitative and qualitative modeling approaches. I would then focus on logic modeling and in particular on the software CellNOpt (http://www.cellnopt.org/ <http://www.cellnopt.org/>) developed in Julio Saez-Rodriguez group (where I have been working as a postdoc over the last 4 years). Here (link <https://dl.dropboxusercontent.com/u/44667927/ICSB_course_FE.key>) some slides I presented at a satellite meeting of the ICSB 2016 conference ("Hands-on tutorial on software tools for logical modeling"), part of the slides are curtsey of Julio Saez-Rodriguez, and the course also included practical exercises.
+
+- Optionally I could include also an overview other bioinformatics tools which can be applied for network analysis and modeling (e.g. Cytoscape, BioModels database, GINsim, MaBoss), maybe with some practical example applied to investigation of immune pathway.
