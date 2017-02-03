@@ -1,0 +1,28 @@
+Large-scale bioinformatics for immuno-oncology 
+
+Overview
+
+The immuno-oncology approach leverages on the unique capability of the immune system to recognize and kill tumor cells. 
+This action is hampered by escape mechanisms put in place by tumor cells, for instance, through the engagement immune checkpoints, 
+inhibitory molecules that modulate the amplitude and duration of immune responses. Immunotherapies that block checkpoint molecules 
+on immune cells are amongst the most promising approaches in immuno-oncology for the enhancement of antitumor immunity. 
+Thanks to high-throughput technologies, such as next generation sequencing (NGS) and proteomics, we have now access to large-scale 
+tumor data that can be used to investigate the interplay between tumor and immune cells and the role of the immune system in tumor 
+progression and response to therapy. In this course, you will learn to use bioinformatics tools to extract from high-throughput tumor 
+data the features describing this complex tumor-immune cell interface, such as: tumor antigens recognized by T cells, tumor-infiltrating 
+immune cells, [... FE's methods...]
+
+Methods
+
+The course comprises practical exercises preceded by short lectures. Exercises will be conducted primarily in the R programming language.
+
+Target Audiences
+
+Motivated <molecular biologists, bioinformaticians, and students> [decide!] who want to gain an understanding of the bioinformatics 
+tools that can be used to investigate the tumor-immune cell interface and eventually learn to extract immune-related features from 
+their own high-throughput data.
+
+Pre-requisites [expand]
+•	Familiar with R (suggest resources?)
+•	Basic UNIX skills (command line)
+•	Basic knowledge of NGS (data format briefly explained, refer to other courses for data processing)
