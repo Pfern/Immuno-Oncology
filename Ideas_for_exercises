@@ -46,15 +46,18 @@ Lecture:
   - Mutation data types (VCF, VEP)
   - RNA-seq/Sequence data types (FASTQ, FASA)
   
-# Ex. B1 (slides): VEP from command line with plugin
+# Ex. B1 (hands on): cancer-germline antigens
 ...
 
-# Ex. B2 (hands on): Extract mutated peptides in R
+# Ex. B2 (slides): VEP from command line with plugin
 ...
 
-# Ex. B3 (hands on): Run Optitype from command line
+# Ex. B3 (hands on): Extract mutated peptides in R
 ...
 
-# Ex. B4 (hands on): Run NetMHCpan from command line
+# Ex. B4 (hands on): Run Optitype from command line
+...
+
+# Ex. B5 (hands on): Run NetMHCpan from command line
 ...
   
