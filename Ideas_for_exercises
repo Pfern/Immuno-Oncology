@@ -22,12 +22,13 @@ Lecture:
   - assess results quantitatively (vs. flow cytometry and CIBERSORT), reasons in the algorithm?
   
  # Ex. A3 (hands on): run deconvolution on R (LM22 + DeconRNAseq?) on TCGA data 
-  - THCA? SKCM?
+  - CRC
   - qualitative assessment
   - impact of normalization (OK in CIBERSORT)
-  - differences bewteen groups
+  - differences bewteen groups (MSS vs. MSI)
  
  # Ex. A4 (hands on): quantify tumor infiltrating lymphocytes from TCGA data in R with ESTIMATE
+  - SKCM?
   - analysis of counts, no TPM (imp. normalization and ranking, GSEA-based)
   - performance assessment with lymph. score
   - differences between groups
