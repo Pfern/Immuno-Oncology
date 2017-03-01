@@ -6,6 +6,7 @@ __________________________________________________________________
 Lecture:
   - Immune cells and TILs (+ relevance)
   - GSEA and deconvolution (+ math)
+  - DeconRNA-seq and ESTIMATE algorithms
   - NGS expression data: TPM, counts, RPKM, FPKM
 
 # Ex. A1 (slides): deconvolution of PBMCs with CIBERSORT web service
@@ -16,16 +17,13 @@ Lecture:
   - share deconvolution results
   
 # Ex. A2 (hands on): run deconvolution on R (LM22 + DeconRNAseq?)
-  - re-annotation with provided map(?)
+  - natural and log-scale
   - benchmarking with flow cytometry: r and RMSE
-  - assess results qualitatively (performance on correlted cell types)
-  - assess results quantitatively (vs. flow cytometry and CIBERSORT), reasons in the algorithm?
+  - assess results (vs. flow cytometry and CIBERSORT), differences due to algorithm?
   
  # Ex. A3 (hands on): run deconvolution on R (LM22 + DeconRNAseq?) on TCGA data 
   - CRC
-  - qualitative assessment
-  - impact of normalization (OK in CIBERSORT)
-  - differences bewteen groups (MSS vs. MSI)
+  - differences between groups (MSS vs. MSI)
  
  # Ex. A4 (hands on): quantify tumor infiltrating lymphocytes from TCGA data in R with ESTIMATE
   - CRC
@@ -41,22 +39,25 @@ __________________________________________________________________
 Lecture: 
   - Tumor-immunity cycle and anticancer immune response
   - Types of tumor antigens
-  - Pipeline for neoantigens
+  - Pipeline for neoantigens (also expression filtering)
   - Mutation data types (VCF, VEP)
   - RNA-seq/Sequence data types (FASTQ, FASA)
   
-# Ex. B1 (hands on): cancer-germline antigens
-...
+# Ex. B1 (hands on): cancer-germline antigens [Maybe…]
+ - Use CRC data and gene lists from CTdtabase (heat map?)
 
-# Ex. B2 (slides): VEP from command line with plugin
-...
+# Ex. B2 (slides): VEP website
+ - single-sample data (selected mutations) 
+ - discuss plugins and options (mutated proteins, Condel score, etc.)
+ - discuss extraction mutated peptides
 
-# Ex. B3 (hands on): Extract mutated peptides in R
-...
+# Ex. B3 (hands on): Run Optitype from command line
+ - Use small files to run Optitype fast
 
-# Ex. B4 (hands on): Run Optitype from command line
-...
+# Ex. B4 (hands on): Run NetMHCpan from website
+ - use data from examples above
 
-# Ex. B5 (hands on): Run NetMHCpan from command line
-...
+# Ex. B5 (hans on, if possible): Run full pipeline
+ - Run full pipeline on real single-sample data (Hugo?): HLA, mutated proteins, binding peptides, filtering
   
+
