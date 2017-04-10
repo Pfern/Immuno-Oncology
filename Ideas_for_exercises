@@ -59,5 +59,32 @@ Lecture:
 
 # Ex. B5 (hands on, if possible): Run full pipeline
  - Run full pipeline on real single-sample data (Hugo?): HLA, mutated proteins, binding peptides, filtering
-  
 
+
+__________________________________________________________________
+
+  C. LOGIC MODELING OF SIGNALING PATHWAYS
+__________________________________________________________________
+
+Lecture:
+
+  - Introduction to signaling pathways
+  - Deregulations in cancer (in primary tumor and immune cells)
+  - Targeted drugs and checkpoint inhibitors
+  - Mechanisms of drug resistance and escape mechanisms to immune system
+  - Investigation of specific pathways: data types (e.g. Reverse Phase Protein Arrays, Mass Spectrometry, xMAP, microfluidics) 
+  - Investigation of specific pathways: mechanistic modeling approaches
+
+# Ex. C1 (hands on): data and network visualisation
+ - introduction to Cytoscape
+ - useful Cytoscape apps (to interface with databases and do basic network analysis)
+
+# Ex. C2 (hands on): different logic modeling formalisms
+ - boolean logic models using CellNoptR and toy example from MacNamara et al., Phys. Biol., 2012
+ - other logic formalism (fuzzy logic, discrete time, logic ODE) with same toy example
+
+# Ex. C3 (hands on): real case study in cancer cells
+ - understanding drug resistance in colorectal cancer (from Eduati et al., Cancer Research, 2017)
+
+# Ex. C4 (hands on): real case study in immune cells
+ - data to be defined
