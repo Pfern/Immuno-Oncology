@@ -39,7 +39,7 @@ Lecture:
   - Selecting/preparing input data: which data should be used? What is TPM normalization effect on rankings?
   - Running ESTIMATE: parameters
   - Interpreting ESTIMATE scores
-  -  Example application on TCGA data: immune scores of CRC molecular subgroups (MSS vs. MSI)
+  - Example application on TCGA data: immune scores of CRC molecular subgroups (MSS vs. MSI)
   
   
 __________________________________________________________________
