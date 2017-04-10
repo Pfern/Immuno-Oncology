@@ -4,17 +4,17 @@ __________________________________________________________________
 __________________________________________________________________
 
 Lecture:
-  - Introduction on immune cells and tumor infiltrating lymphocytes: types and relevance for cancer
-  - Estimating tumor infiltrating immune cells from expression data: GSEA and deconvolution (also ESTIMATE)
-  - Example algorithms: how do they work in practice?
+  - Immune cells and tumor infiltrating lymphocytes: types, functional orientation, and relevance for cancer
+  - Estimating tumor infiltrating immune cells from expression data: GSEA, deconvolution, ESTIMATE,...
+  - Example algorithms for deconvolution: how do they work in practice?
   - Brief introduction on NGS expression data (i.e. RNA-seq): TPM, counts, RPKM, FPKM
 
-# Ex. A1 (slides): deconvolution of RNA-seq data with a web server
+# Ex. A1 (slides): deconvolution of RNA-seq data with a web-service
 # Data: Hoek et. al, 2015?
 # Method: CIBERSORT web-service
   - Understanding input data: introduction to LM22 signature matrix and immune cell-types
-  - Understanding input data: overlap mixture/signature genes, annotation, Excel format issues, data format
-  - Running the analysis: present options
+  - Possible data issues: overlap mixture/signature genes, annotation, Excel format issues, data format
+  - Running the analysis: options
   - Understanding the results: output data format
   [ Save deconvolution results in shared folder ]
   
@@ -24,22 +24,22 @@ Lecture:
   - Understanding the effect of data normalization: natural and log-scale
   - Understanding the collinearity issue
   - Benchmarking deconvolution results with flow cytometry: correlation and RMSE
-  - Comparing method results
+  - Comparing results between methods
   
 # Ex. A3 (hands-on): deconvolution of tumor RNA-seq data in R
 # Data: TCGA CRC
 # Method: DeconRNAseq+LM22?
-  - Preparing input data
-  - Running deconvolution
-  - Assessing differences between CRC molecular subgroups (MSS vs. MSI)
+  - Preparing input data for deconvolution
+  - Running deconvolution in R: options
+  - Example application on TCGA data: tumor-infiltrating immune cells in CRC molecular subgroups (MSS vs. MSI)
  
-# Ex. A4 (hands-on): quantification of tumor infiltrating lymphocytes tumor RNA-seq data in R
+# Ex. A4 (hands-on): quantification of tumor infiltrating lymphocytes from tumor RNA-seq data in R
 # Data: TCGA CRC
 # Method: ESTIMATE
-  - Preparing input data: which data should be used? What is TPM normalization effect on rankings?
-  - Running ESTIMATE
+  - Selecting/preparing input data: which data should be used? What is TPM normalization effect on rankings?
+  - Running ESTIMATE: parameters
   - Interpreting ESTIMATE scores
-  - Assessing differences between CRC molecular subgroups (MSS vs. MSI)
+  -  Example application on TCGA data: immune scores of CRC molecular subgroups (MSS vs. MSI)
   
   
 __________________________________________________________________
@@ -48,45 +48,45 @@ __________________________________________________________________
 __________________________________________________________________
 
 Lectures: 
-  - Introduction on the tumor-immunity cycle and on the anticancer immune response
-  - Different steps for antigen processing and presentations:  
-  - Illustration of the different types of tumor antigens
-  - Introduction to the prediction of tumor neoa-ntigens (computational pipeline, tools, input data)
-  - Introduction on HLAs, and 4-digit resolution
+  - The tumor-immunity cycle and the anticancer immune response
+  - The different steps of antigen processing and presentations  
+  - The different types of tumor antigens and their specificity
+  - Pipelines and tools for the prediction of tumor neo-antigens from NGS data
+  - Human MHC: HLAs and HLA-typing at 4-digit resolution
   - Brief introduction on mutational data: VCF format
   - Brief introduction on sequence data fromat (RNA-seq reads, genome, protein): FASTQ, FASTA
   
-# Ex. B1 (hands-on): quantification of cancer-germline-antigen expression from tumor RNA-seq data [Maybe…]
+# Ex. B1 (hands-on): quantification of cancer-germline-antigen expression from tumor RNA-seq data [ Maybe… ]
 # Data: TCGA CRC
-# Method: heatmap?
- - Integrate gene expression data  CTdtabase (heat map?)
- - Discuss issues with expression in normal tissues (databases)
+# Method: heatmap, CTdtabase, databases for normal tissues
+ - Assess the expression of cancer-germline antigens (CGAs) listed in the CTdtabase
+ - Specificity of CGA expression: issues with expression in normal tissues (databases)
 
 # Ex. B2 (slides): annotation of somatic mutations to predict mutated proteins
 # Data: single-sample tumor data (VCF) on selected mutations
 # Method: VEP web-service
- - Discuss parameters, plugings (mutated proteins, Condel score)
- - Output data format: important info for neo-antigen prediction
- - Estract mutated peptides from mutated proteins (R code?)
+ - Run VEP: parameters and plugings (mutated proteins, Condel score)
+ - Output data format: extracting the mutated proteins
+ - Extract mutated peptides from mutated proteins (R code?)
  [ Save deconvolution results in shared folder ]
 
 # Ex. B3 (hands-on, if possibl): prediction of HLA-types from RNA-seq data
 # Data: SMALL RNA-seq data from single-sample (TIminer)
 # Method: Optitype @TIminer
- - Discuss input (DNA/RNA) and output data and parameters 
+ - Running Optitype: input (DNA/RNA) and parameters 
+ - Interpreting results: output data format and 4-digit resolution
  [ Save deconvolution results in shared folder ]
 
 # Ex. B4 (hands-on): prediction of HLA-peptide binding affinity
 # Data: few examples peptides from B2, HLAs from B3
 # Method: Optitype @TIminer
 - Preparing input data
-- Interpreting results (ranks and binding affinity)
-- Present other antigen processing/presentation predictions and tools
+- Interpreting results: ranks and binding affinity
 
 # Ex. B5 (hands-on, if possible): prediction of tumor neo-antigens from single-patient mutational and RNA-seq data
 # Data: TCGA SKCM?
 # Method: TIminer?
-- Run full pipeline on real/reduced single-sample data, also with expression filtering
+- Run the full pipeline on single-sample data, also with expression filtering
 - Interpreting the results
 - Discuss the importance of neo-antigens prioritization (examples from personalized vaccination)
 
