@@ -4,31 +4,42 @@ __________________________________________________________________
 __________________________________________________________________
 
 Lecture:
-  - Immune cells and TILs (+ relevance)
-  - GSEA and deconvolution (+ math)
-  - DeconRNA-seq and ESTIMATE algorithms
-  - NGS expression data: TPM, counts, RPKM, FPKM
+  - Introduction on immune cells and tumor infiltrating lymphocytes: types and relevance for cancer
+  - Estimating tumor infiltrating immune cells from expression data: GSEA and deconvolution (also ESTIMATE)
+  - Example algorithms: how do they work in practice?
+  - Brief introduction on NGS expression data (i.e. RNA-seq): TPM, counts, RPKM, FPKM
 
-# Ex. A1 (slides): deconvolution of PBMCs with CIBERSORT web service
-  - presents LM22 and immune cell types
-  - show codes
-  - discuss overlap mixture/signature genes, re-annotation(?), excel format issues(?) 
-  - discuss results (fractions, not for all tools)
-  - share deconvolution results
+# Ex. A1 (slides): deconvolution of RNA-seq data with a web server
+# Data: Hoek et. al, 2015?
+# Method: CIBERSORT web-service
+  - Understanding input data: introduction to LM22 signature matrix and immune cell-types
+  - Understanding input data: overlap mixture/signature genes, annotation, Excel format issues, data format
+  - Running the analysis: present options
+  - Understanding the results: output data format
+  [ Save deconvolution results in shared folder ]
   
-# Ex. A2 (hands on): run deconvolution on R (LM22 + DeconRNAseq?)
-  - natural and log-scale
-  - benchmarking with flow cytometry: r and RMSE
-  - assess results (vs. flow cytometry and CIBERSORT), differences due to algorithm?
+# Ex. A2 (hands-on): deconvolution of RNA-seq in R 
+# Data: Hoek et. al, 2015?
+# Method: DeconRNAseq+LM22?
+  - Understanding the effect of data normalization: natural and log-scale
+  - Understanding the collinearity issue
+  - Benchmarking deconvolution results with flow cytometry: correlation and RMSE
+  - Comparing method results
   
- # Ex. A3 (hands on): run deconvolution on R (LM22 + DeconRNAseq?) on TCGA data 
-  - CRC
-  - differences between groups (MSS vs. MSI)
+# Ex. A3 (hands-on): deconvolution of tumor RNA-seq data in R
+# Data: TCGA CRC
+# Method: DeconRNAseq+LM22?
+  - Preparing input data
+  - Running deconvolution
+  - Assessing differences between CRC molecular subgroups (MSS vs. MSI)
  
- # Ex. A4 (hands on): quantify tumor infiltrating lymphocytes from TCGA data in R with ESTIMATE
-  - CRC
-  - analysis of counts, no TPM (imp. normalization and ranking, GSEA-based)
-  - differences between groups
+# Ex. A4 (hands-on): quantification of tumor infiltrating lymphocytes tumor RNA-seq data in R
+# Data: TCGA CRC
+# Method: ESTIMATE
+  - Preparing input data: which data should be used? What is TPM normalization effect on rankings?
+  - Running ESTIMATE
+  - Interpreting ESTIMATE scores
+  - Assessing differences between CRC molecular subgroups (MSS vs. MSI)
   
   
 __________________________________________________________________
@@ -36,55 +47,46 @@ __________________________________________________________________
   B. TUMOR ANTIGENS
 __________________________________________________________________
 
-Lecture: 
-  - Tumor-immunity cycle and anticancer immune response
-  - Types of tumor antigens
-  - Pipeline for neoantigens (also expression filtering)
-  - Mutation data types (VCF, VEP)
-  - RNA-seq/Sequence data types (FASTQ, FASA)
+Lectures: 
+  - Introduction on the tumor-immunity cycle and on the anticancer immune response
+  - Different steps for antigen processing and presentations:  
+  - Illustration of the different types of tumor antigens
+  - Introduction to the prediction of tumor neoa-ntigens (computational pipeline, tools, input data)
+  - Introduction on HLAs, and 4-digit resolution
+  - Brief introduction on mutational data: VCF format
+  - Brief introduction on sequence data fromat (RNA-seq reads, genome, protein): FASTQ, FASTA
   
-# Ex. B1 (hands on): cancer-germline antigens [Maybe…]
- - Use CRC data and gene lists from CTdtabase (heat map?)
+# Ex. B1 (hands-on): quantification of cancer-germline-antigen expression from tumor RNA-seq data [Maybe…]
+# Data: TCGA CRC
+# Method: heatmap?
+ - Integrate gene expression data  CTdtabase (heat map?)
+ - Discuss issues with expression in normal tissues (databases)
 
-# Ex. B2 (slides): VEP website
- - single-sample data (selected mutations) 
- - discuss plugins and options (mutated proteins, Condel score, etc.)
- - discuss extraction mutated peptides
+# Ex. B2 (slides): annotation of somatic mutations to predict mutated proteins
+# Data: single-sample tumor data (VCF) on selected mutations
+# Method: VEP web-service
+ - Discuss parameters, plugings (mutated proteins, Condel score)
+ - Output data format: important info for neo-antigen prediction
+ - Estract mutated peptides from mutated proteins (R code?)
+ [ Save deconvolution results in shared folder ]
 
-# Ex. B3 (hands on): Run Optitype from command line
- - Use small files to run Optitype fast
+# Ex. B3 (hands-on, if possibl): prediction of HLA-types from RNA-seq data
+# Data: SMALL RNA-seq data from single-sample (TIminer)
+# Method: Optitype @TIminer
+ - Discuss input (DNA/RNA) and output data and parameters 
+ [ Save deconvolution results in shared folder ]
 
-# Ex. B4 (hands on): Run NetMHCpan from website
- - use data from examples above
+# Ex. B4 (hands-on): prediction of HLA-peptide binding affinity
+# Data: few examples peptides from B2, HLAs from B3
+# Method: Optitype @TIminer
+- Preparing input data
+- Interpreting results (ranks and binding affinity)
+- Present other antigen processing/presentation predictions and tools
 
-# Ex. B5 (hands on, if possible): Run full pipeline
- - Run full pipeline on real single-sample data (Hugo?): HLA, mutated proteins, binding peptides, filtering
+# Ex. B5 (hands-on, if possible): prediction of tumor neo-antigens from single-patient mutational and RNA-seq data
+# Data: TCGA SKCM?
+# Method: TIminer?
+- Run full pipeline on real/reduced single-sample data, also with expression filtering
+- Interpreting the results
+- Discuss the importance of neo-antigens prioritization (examples from personalized vaccination)
 
-
-__________________________________________________________________
-
-  C. LOGIC MODELING OF SIGNALING PATHWAYS
-__________________________________________________________________
-
-Lecture:
-
-  - Introduction to signaling pathways
-  - Deregulations in cancer (in primary tumor and immune cells)
-  - Targeted drugs and checkpoint inhibitors
-  - Mechanisms of drug resistance and escape mechanisms to immune system
-  - Investigation of specific pathways: data types (e.g. Reverse Phase Protein Arrays, Mass Spectrometry, xMAP, microfluidics) 
-  - Investigation of specific pathways: mechanistic modeling approaches
-
-# Ex. C1 (hands on): data and network visualisation
- - introduction to Cytoscape
- - useful Cytoscape apps (to interface with databases and do basic network analysis)
-
-# Ex. C2 (hands on): different logic modeling formalisms
- - boolean logic models using CellNoptR and toy example from MacNamara et al., Phys. Biol., 2012
- - other logic formalism (fuzzy logic, discrete time, logic ODE) with same toy example
-
-# Ex. C3 (hands on): real case study in cancer cells
- - understanding drug resistance in colorectal cancer (from Eduati et al., Cancer Research, 2017)
-
-# Ex. C4 (hands on): real case study in immune cells
- - data to be defined
