@@ -1,0 +1,48 @@
+List of the main Learning Objectives LO (Temporarily split by topic), followed by specific learning outcomes
+
+------------------------------------------------
+
+TUMOR-INFILTRATING IMMUNE CELLS
+
+
+LO 1. Have an overview of the immune cells infiltrating human tumors
+      - Describe the cancer-immunity cycle and list the main immune cell types involved in antitumor immunity 
+      - List the differente types of immune cells present in the tumor microenvironment, their pro- or anti-tumorigenic role, and their prognostic/predictive value
+
+LO 2.  Understand the computational approaches available to investigate tumor-infiltrating immune cells from expression data
+      - Explain the methodology behind the computational approaches for the quantification of tumor-infiltrating immune cells
+      - Summarize the differences between GSEA and deconvolution approaches
+      - List the main methods for expression-data deconvolution and discuss their differences in terms of target cell types and mathematical approach
+
+LO 3.  Select and prepare NGS expression data for analysis
+      - Illustrate the different types of RNA-seq expression data: e.g. raw counts, RPKM, FPKM, TPM, counts, other library scaling approaches.
+      - Annotate expression data using updated gene symbols to avoid data loss
+      - Avoide possible "Excel conversion issues"
+      - Explain the effect of normalization (e.g. TPM or log-scale) on gene ranking and expression
+
+LO 4. Analyze NGS expression data to quantify tumor infiltrating lymphocytes (TILs) and other immune cell types
+      - Estimate immune cell fractions from colorectal cancer (CRC) NGS data using DeconRNA-seq in R
+      - Compute TIL scores using ESTIMATE in R
+
+LO 5. Understand the results and their relevance for immunotherapy with checkpoint blockers
+      - Visualize cell fractions as boxplots and compare them between different CRC subtypes
+      - Discuss the possible consequences for immunotherapy
+
+LO 6. Benchmarck deconvolution results and identify possible pitfalls in the analysis
+      - List alternative experimental methodologies for the quantification of tumor-infiltrating immune cells that can be used to benchmark deconvolution results
+      - Use Pearson's correlation and RMSE to quantitatively assess deconvolution performance
+      - Troubleshoot deconvolution results (e.g. missing signature genes, normalization, collinearity)
+
+
+------------------------------------------------
+
+TUMOR ANTIGENS
+
+... tba
+
+
+------------------------------------------------
+
+LOGIC MODELING OF SIGNALING PATHWAYS
+
+... tba
